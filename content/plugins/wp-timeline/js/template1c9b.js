@@ -48,9 +48,11 @@
 		$(".wpex-filter:not(.year-ft)").on('click', 'div span',function() {
 			var contenId = jQuery(this).attr("id");
 			var windowHeight = $(window).height();
-			$('html,body').animate({
-				scrollTop: $("."+contenId).offset().top - windowHeight * .2},
-				'slow');
+			// $('html,body').animate({
+			// 	scrollTop: $("."+contenId).offset().top - windowHeight * .2},
+			// 	'slow');
+			    $('div span').removeClass("active");
+    			$(this).addClass("active");
 		});
 		if($(".wpex-timeline-list").length ){
 			wpex_timeline_scroll();
